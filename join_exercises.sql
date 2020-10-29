@@ -9,3 +9,10 @@ JOIN departments AS d
 WHERE dm.to_date = '9999-01-01'
     AND e.gender = 'F';
 
+SELECT title, COUNT(title) from titles AS t
+JOIN dept_emp AS de
+    ON t.emp_no = de.emp_no
+WHERE de.dept_no = 'd009'
+    AND t.to_date = '9999-01-01'
+    AND de.to_date = '9999-01-01'
+GROUP BY title;
