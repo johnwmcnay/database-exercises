@@ -6,5 +6,6 @@ JOIN employees AS e
     ON dm.emp_no = e.emp_no
 JOIN departments AS d
     ON dm.dept_no = d.dept_no
-WHERE dm.to_date = '9999-01-01';
+WHERE dm.to_date = '9999-01-01'
+    AND e.gender = 'F';
 
